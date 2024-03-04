@@ -1,0 +1,63 @@
+﻿  CppCLR_WinFormsProject.cpp
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(158,55): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(158,47): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(175,55): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(175,47): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(176,75): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(176,67): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(177,75): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(177,67): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(178,75): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(178,67): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(213,55): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(213,47): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(253,76): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(253,68): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(277,76): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(277,68): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(302,76): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(302,68): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(342,53): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+C:\Users\Никита\Downloads\project-main\project-main\Form1.h(342,45): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "/CppCLR_WinFormsProject.cpp")
+  
+  AssemblyInfo.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  ExampleCode.vcxproj -> C:\Users\Никита\Downloads\project-main\project-main\x64\Debug\ExampleCode.exe

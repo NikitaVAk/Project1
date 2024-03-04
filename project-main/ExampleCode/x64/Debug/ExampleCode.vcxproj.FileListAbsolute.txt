@@ -1,0 +1,3 @@
+C:\Users\Никита\Downloads\project-main\project-main\ExampleCode\x64\Debug\ExampleCode.vcxproj.AssemblyReference.cache
+C:\Users\Никита\Downloads\project-main\project-main\ExampleCode\x64\Debug\ExampleCode.Form1.resources
+C:\Users\Никита\Downloads\project-main\project-main\ExampleCode\x64\Debug\ExampleCode.vcxproj.GenerateResource.cache
