@@ -131,14 +131,14 @@ namespace CppCLRWinFormsProject {
 
 		}
 	private: System::Void pictureBox1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-		// Îòðèñîâêà áóôåðíîãî èçîáðàæåíèÿ íà pictureBox1
+		// ÃŽÃ²Ã°Ã¨Ã±Ã®Ã¢ÃªÃ  Ã¡Ã³Ã´Ã¥Ã°Ã­Ã®Ã£Ã® Ã¨Ã§Ã®Ã¡Ã°Ã Ã¦Ã¥Ã­Ã¨Ã¿ Ã­Ã  pictureBox1
 		if (bufferImage != nullptr)
 		{
 			e->Graphics->DrawImage(bufferImage, 0, 0);
 		}
 	}
 #pragma endregion
-		void fbdvar(int x, int y, String^ name)  // ôóíêöèÿ ñîçäàíèÿ áëîêà Âõîä â ÿçûêå FBD
+		void fbdvar(int x, int y, String^ name)  // Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿ Ã±Ã®Ã§Ã¤Ã Ã­Ã¨Ã¿ Ã¡Ã«Ã®ÃªÃ  Ã‚ÃµÃ®Ã¤ Ã¢ Ã¿Ã§Ã»ÃªÃ¥ FBD
 		{
 			x *= mx;
 			y = my * y + 16 + biasY;
@@ -148,8 +148,8 @@ namespace CppCLRWinFormsProject {
 			Pen^ pen = gcnew Pen(Color::Black, 2);
 			g->DrawRectangle(pen, x + 10, y + 10, 35, 35);
 			g->DrawLine(pen, x + 10 + 35, y + 10 + 35 / 2, x + 45 + 92, y + 10 + 35 / 2);
-			g->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå òåêñòà
-			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå ëèíèé è ôîðì
+			g->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã²Ã¥ÃªÃ±Ã²Ã 
+			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã«Ã¨Ã­Ã¨Ã© Ã¨ Ã´Ã®Ã°Ã¬
 			if (name->Length > 2)
 			{
 				x -= ((name->Length - 2) * 4);
@@ -157,28 +157,28 @@ namespace CppCLRWinFormsProject {
 			}
 			g->DrawString(name, drawFont, fontBrush, x + 20, y + 20);
 		}
-		void fbdand(int x, int y) // ôóíêöèÿ ñîçäàíèÿ áëîêà AND â ÿçûêå FBD
+		void fbdand(int x, int y) // Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿ Ã±Ã®Ã§Ã¤Ã Ã­Ã¨Ã¿ Ã¡Ã«Ã®ÃªÃ  AND Ã¢ Ã¿Ã§Ã»ÃªÃ¥ FBD
 		{
 			x *= mx;
 			y *= my;
 			y += biasY;
 			Graphics^ g = Graphics::FromImage(bufferImage);
-			SolidBrush^ fontBrush = gcnew SolidBrush(Color::Black); // çàäàåò îáúåêò SolidBrush, êîòîðûé èñïîëüçóåòñÿ êàê öâåò äëÿ òåêñòà èëè çàïîëíåíè ôèãóðû
-			System::Drawing::Font^ drawFont = gcnew System::Drawing::Font("Arial", 11); // äàííûé îáúåêò ñîçäàåòñÿ äëÿ îïðåäåëåíèÿ øðèôòà è ðàçìåðà òåêñòà
+			SolidBrush^ fontBrush = gcnew SolidBrush(Color::Black); // Ã§Ã Ã¤Ã Ã¥Ã² Ã®Ã¡ÃºÃ¥ÃªÃ² SolidBrush, ÃªÃ®Ã²Ã®Ã°Ã»Ã© Ã¨Ã±Ã¯Ã®Ã«Ã¼Ã§Ã³Ã¥Ã²Ã±Ã¿ ÃªÃ Ãª Ã¶Ã¢Ã¥Ã² Ã¤Ã«Ã¿ Ã²Ã¥ÃªÃ±Ã²Ã  Ã¨Ã«Ã¨ Ã§Ã Ã¯Ã®Ã«Ã­Ã¥Ã­Ã¨ Ã´Ã¨Ã£Ã³Ã°Ã»
+			System::Drawing::Font^ drawFont = gcnew System::Drawing::Font("Arial", 11); // Ã¤Ã Ã­Ã­Ã»Ã© Ã®Ã¡ÃºÃ¥ÃªÃ² Ã±Ã®Ã§Ã¤Ã Ã¥Ã²Ã±Ã¿ Ã¤Ã«Ã¿ Ã®Ã¯Ã°Ã¥Ã¤Ã¥Ã«Ã¥Ã­Ã¨Ã¿ Ã¸Ã°Ã¨Ã´Ã²Ã  Ã¨ Ã°Ã Ã§Ã¬Ã¥Ã°Ã  Ã²Ã¥ÃªÃ±Ã²Ã 
 			Pen^ pen = gcnew Pen(Color::Black, 2);
-			g->DrawRectangle(pen, x + 10, y + 10, 105, 75); // ñîçäàåò ïðÿìîóãîëíèê penîì, ïåðâûå äâà ïàðàìåòðà ýòî òî÷êà îòðèñîâêè, à ñëåäóþùèå äâà øèðèíà è òîëùèíà ñîîòâåòñâåííî
+			g->DrawRectangle(pen, x + 10, y + 10, 105, 75); // Ã±Ã®Ã§Ã¤Ã Ã¥Ã² Ã¯Ã°Ã¿Ã¬Ã®Ã³Ã£Ã®Ã«Ã­Ã¨Ãª penÃ®Ã¬, Ã¯Ã¥Ã°Ã¢Ã»Ã¥ Ã¤Ã¢Ã  Ã¯Ã Ã°Ã Ã¬Ã¥Ã²Ã°Ã  Ã½Ã²Ã® Ã²Ã®Ã·ÃªÃ  Ã®Ã²Ã°Ã¨Ã±Ã®Ã¢ÃªÃ¨, Ã  Ã±Ã«Ã¥Ã¤Ã³Ã¾Ã¹Ã¨Ã¥ Ã¤Ã¢Ã  Ã¸Ã¨Ã°Ã¨Ã­Ã  Ã¨ Ã²Ã®Ã«Ã¹Ã¨Ã­Ã  Ã±Ã®Ã®Ã²Ã¢Ã¥Ã²Ã±Ã¢Ã¥Ã­Ã­Ã®
 			g->DrawLine(pen, x + 10, y + 10 + 67 / 2, x - 26 / 2, y + 10 + 67 / 2);
 			g->DrawLine(pen, x + 10, y + 35 + 67 / 2, x - 26 / 2, y + 35 + 67 / 2);
 			g->DrawLine(pen, x + 10 + 105, y + 10 + 67 / 2, x + 115 + 45 / 2, y + 10 + 67 / 2);
-			g->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå òåêñòà
-			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå ëèíèé è ôîðì
-			g->DrawString("OR", drawFont, fontBrush, x + 43, y + 15);  // ñîçäàåò òåêñò, â êîòîðîì ñíà÷àëà ïåðåäàåòñÿ òåêñò, ïîòîì îáúåêò Font, äàëåå solidbrush, äàëåå çàäàåòñÿ òî÷êà ïîëîæåíèÿ
+			g->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã²Ã¥ÃªÃ±Ã²Ã 
+			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã«Ã¨Ã­Ã¨Ã© Ã¨ Ã´Ã®Ã°Ã¬
+			g->DrawString("OR", drawFont, fontBrush, x + 43, y + 15);  // Ã±Ã®Ã§Ã¤Ã Ã¥Ã² Ã²Ã¥ÃªÃ±Ã², Ã¢ ÃªÃ®Ã²Ã®Ã°Ã®Ã¬ Ã±Ã­Ã Ã·Ã Ã«Ã  Ã¯Ã¥Ã°Ã¥Ã¤Ã Ã¥Ã²Ã±Ã¿ Ã²Ã¥ÃªÃ±Ã², Ã¯Ã®Ã²Ã®Ã¬ Ã®Ã¡ÃºÃ¥ÃªÃ² Font, Ã¤Ã Ã«Ã¥Ã¥ solidbrush, Ã¤Ã Ã«Ã¥Ã¥ Ã§Ã Ã¤Ã Ã¥Ã²Ã±Ã¿ Ã²Ã®Ã·ÃªÃ  Ã¯Ã®Ã«Ã®Ã¦Ã¥Ã­Ã¨Ã¿
 			g->DrawString(Convert::ToString("IN1"), drawFont, fontBrush, x + 18, y + 35);
 			g->DrawString(Convert::ToString("IN2"), drawFont, fontBrush, x + 18, y + 60);
 			g->DrawString(Convert::ToString("OUT"), drawFont, fontBrush, x + 75, y + 35);
 		}
 
-		void fbdjumps(int x, int y, int z) // ôóíêöèÿ ñîçäàíèÿ âåðòèêàëüíîé ÷åðòû â ÿçûêå FBD, äëÿ ñîåäèíåíèÿ ýëåìåíòîâ, ïàðàìåòð z çàäàåò âûñîòó ïðûæêà
+		void fbdjumps(int x, int y, int z) // Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿ Ã±Ã®Ã§Ã¤Ã Ã­Ã¨Ã¿ Ã¢Ã¥Ã°Ã²Ã¨ÃªÃ Ã«Ã¼Ã­Ã®Ã© Ã·Ã¥Ã°Ã²Ã» Ã¢ Ã¿Ã§Ã»ÃªÃ¥ FBD, Ã¤Ã«Ã¿ Ã±Ã®Ã¥Ã¤Ã¨Ã­Ã¥Ã­Ã¨Ã¿ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã®Ã¢, Ã¯Ã Ã°Ã Ã¬Ã¥Ã²Ã° z Ã§Ã Ã¤Ã Ã¥Ã² Ã¢Ã»Ã±Ã®Ã²Ã³ Ã¯Ã°Ã»Ã¦ÃªÃ 
 		{
 			x *= mx;
 			y *= my;
@@ -188,11 +188,11 @@ namespace CppCLRWinFormsProject {
 			g->DrawLine(pen, x - 26 / 2, y + 35 + 67 / 2, x - 26 / 2, y + 20 + 67 / 2 + 45 + 55 * (z - 1));
 		}
 
-		void fbdend(int x, int y, String^ name) // ôóíêöèÿ ñîçäàíèÿ áëîêà Âûõîä ÿçûêå FBD, ïàðàìåòð b îòâå÷àåò çà íîìåð ïåðåìåííîé Q
+		void fbdend(int x, int y, String^ name) // Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿ Ã±Ã®Ã§Ã¤Ã Ã­Ã¨Ã¿ Ã¡Ã«Ã®ÃªÃ  Ã‚Ã»ÃµÃ®Ã¤ Ã¿Ã§Ã»ÃªÃ¥ FBD, Ã¯Ã Ã°Ã Ã¬Ã¥Ã²Ã° b Ã®Ã²Ã¢Ã¥Ã·Ã Ã¥Ã² Ã§Ã  Ã­Ã®Ã¬Ã¥Ã° Ã¯Ã¥Ã°Ã¥Ã¬Ã¥Ã­Ã­Ã®Ã© Q
 		{
-			if (name[0] == 'I' && (name[1] >= '1' || name[1] <= '9')) // óñëîâèå äëÿ òîãî, ÷òîáû ôèçè÷åñêèå âõîäû íå áûëè âûõîäàìè
+			if (name[0] == 'I' && (name[1] >= '1' || name[1] <= '9')) // Ã³Ã±Ã«Ã®Ã¢Ã¨Ã¥ Ã¤Ã«Ã¿ Ã²Ã®Ã£Ã®, Ã·Ã²Ã®Ã¡Ã» Ã´Ã¨Ã§Ã¨Ã·Ã¥Ã±ÃªÃ¨Ã¥ Ã¢ÃµÃ®Ã¤Ã» Ã­Ã¥ Ã¡Ã»Ã«Ã¨ Ã¢Ã»ÃµÃ®Ã¤Ã Ã¬Ã¨
 			{
-				MessageBox::Show("Ôèçè÷åñêèå âõîäû íå ìîãóò ÿâëÿòüñÿ âûõîäàìè");
+				MessageBox::Show("Ã”Ã¨Ã§Ã¨Ã·Ã¥Ã±ÃªÃ¨Ã¥ Ã¢ÃµÃ®Ã¤Ã» Ã­Ã¥ Ã¬Ã®Ã£Ã³Ã² Ã¿Ã¢Ã«Ã¿Ã²Ã¼Ã±Ã¿ Ã¢Ã»ÃµÃ®Ã¤Ã Ã¬Ã¨");
 				Close();
 			}
 			x *= mx;
@@ -203,13 +203,13 @@ namespace CppCLRWinFormsProject {
 			Pen^ pen = gcnew Pen(Color::Black, 2);
 			g->DrawRectangle(pen, x + 75, y + 10, 35, 35);
 			g->DrawLine(pen, x - 34, y + 10 + 35 / 2, x + 45 + 30, y + 10 + 35 / 2);
-			if (name->Length > 2) // óñëîâèå âûíîñà òåêñòà ïåðåìåííîé íàâåðõ, ÷òîáû âëåçëî âíóòðü áëîêà
+			if (name->Length > 2) // Ã³Ã±Ã«Ã®Ã¢Ã¨Ã¥ Ã¢Ã»Ã­Ã®Ã±Ã  Ã²Ã¥ÃªÃ±Ã²Ã  Ã¯Ã¥Ã°Ã¥Ã¬Ã¥Ã­Ã­Ã®Ã© Ã­Ã Ã¢Ã¥Ã°Ãµ, Ã·Ã²Ã®Ã¡Ã» Ã¢Ã«Ã¥Ã§Ã«Ã® Ã¢Ã­Ã³Ã²Ã°Ã¼ Ã¡Ã«Ã®ÃªÃ 
 			{
 				x -= ((name->Length - 2) * 4);
 				y -= 26;
 			}
-			g->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå òåêñòà
-			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå ëèíèé è ôîðì
+			g->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã²Ã¥ÃªÃ±Ã²Ã 
+			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã«Ã¨Ã­Ã¨Ã© Ã¨ Ã´Ã®Ã°Ã¬
 			g->DrawString(name, drawFont, fontBrush, x + 80, y + 20);
 
 		}
@@ -229,31 +229,52 @@ namespace CppCLRWinFormsProject {
 
 		}
 
-		void fbdINO(int x, int y, bool z) // ôóíêöèÿ, êîòîðàÿ â çàâèñèìîñòè îò òîãî, ÷òî ïîäõîäèò ê IN1, ïîäñâå÷èâàåò åãî çåëåíûì èëè áåëûì
+	void fbdsteps(int x, int y, int z) // Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ñ Ð³Ð¾Ñ€Ð¸Ð·Ð¾Ð½Ñ‚Ð°Ð»ÑŒÐ½Ð¾Ð¹ Ñ‡ÐµÑ€Ñ‚Ñ‹ Ð² ÑÐ·Ñ‹ÐºÐµ FBD, Ð´Ð»Ñ Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ Ð¿ÑƒÑÑ‚Ð¾Ñ‚ Ð¼ÐµÐ¶Ð´Ñƒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°Ð¼Ð¸, Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€ z Ð·Ð°Ð´Ð°ÐµÑ‚ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ²Ð¾Ð±Ð¾Ð´Ð½Ñ‹Ñ… ÐºÐ»ÐµÑ‚Ð¾Ðº
+	{
+		int a, b;
+		x *= mx;
+		y *= my;
+		y += biasY;
+		Graphics^ g = Graphics::FromImage(bufferImage);
+		Pen^ pen = gcnew Pen(Color::Black, 2);
+		if (z > 0)
+		{
+			g->DrawLine(pen, x - 18 , y + 26 + 35 / 2, x + 45 + 92 + 150 * (z - 1), y + 26 + 35 / 2);
+			while (z > 0)
+			{
+			a = x / mx + z - 1;
+			b = (y - biasY) / my;
+			Logic[numbprog][x/mx + z - 1][(y - biasY)/ my] = true;
+			z--;
+			}
+		}
+	}
+
+		void fbdINO(int x, int y, bool z) // Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿, ÃªÃ®Ã²Ã®Ã°Ã Ã¿ Ã¢ Ã§Ã Ã¢Ã¨Ã±Ã¨Ã¬Ã®Ã±Ã²Ã¨ Ã®Ã² Ã²Ã®Ã£Ã®, Ã·Ã²Ã® Ã¯Ã®Ã¤ÃµÃ®Ã¤Ã¨Ã² Ãª IN1, Ã¯Ã®Ã¤Ã±Ã¢Ã¥Ã·Ã¨Ã¢Ã Ã¥Ã² Ã¥Ã£Ã® Ã§Ã¥Ã«Ã¥Ã­Ã»Ã¬ Ã¨Ã«Ã¨ Ã¡Ã¥Ã«Ã»Ã¬
 		{
 			y *= my;
 			y += biasY;
 			x *= mx;
 			Graphics^ g = Graphics::FromImage(bufferImage);
-			Color color; // ñîçäàåò îáúåêò öâåò
-			if (z) // ïåðåìåííàÿ ïåðåäàþùàÿ ñîñòîÿíèå ôõîäà
+			Color color; // Ã±Ã®Ã§Ã¤Ã Ã¥Ã² Ã®Ã¡ÃºÃ¥ÃªÃ² Ã¶Ã¢Ã¥Ã²
+			if (z) // Ã¯Ã¥Ã°Ã¥Ã¬Ã¥Ã­Ã­Ã Ã¿ Ã¯Ã¥Ã°Ã¥Ã¤Ã Ã¾Ã¹Ã Ã¿ Ã±Ã®Ã±Ã²Ã®Ã¿Ã­Ã¨Ã¥ Ã´ÃµÃ®Ã¤Ã 
 			{
-				color = Color::Green; // åñëè ïðèõîäèò 1, òî öâåò ñòàíîâèòñÿ çåëåíûì
+				color = Color::Green; // Ã¥Ã±Ã«Ã¨ Ã¯Ã°Ã¨ÃµÃ®Ã¤Ã¨Ã² 1, Ã²Ã® Ã¶Ã¢Ã¥Ã² Ã±Ã²Ã Ã­Ã®Ã¢Ã¨Ã²Ã±Ã¿ Ã§Ã¥Ã«Ã¥Ã­Ã»Ã¬
 			}
 			else
 			{
-				color = Color::White; // åñëè ïðèõîäèò 0, òî öâåò ñòàíîâèòñÿ áåëûì
+				color = Color::White; // Ã¥Ã±Ã«Ã¨ Ã¯Ã°Ã¨ÃµÃ®Ã¤Ã¨Ã² 0, Ã²Ã® Ã¶Ã¢Ã¥Ã² Ã±Ã²Ã Ã­Ã®Ã¢Ã¨Ã²Ã±Ã¿ Ã¡Ã¥Ã«Ã»Ã¬
 			}
 			SolidBrush^ fontBrush = gcnew SolidBrush(color);
 			SolidBrush^ fontBrushs = gcnew SolidBrush(Color::Black);
 			System::Drawing::Font^ drawFont = gcnew System::Drawing::Font("Arial", 11);
 			g->FillRectangle(fontBrush, 12 + x, 32 + y, 40, 22);
-			g->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå òåêñòà
-			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå ëèíèé è ôîðì
-			g->DrawString(Convert::ToString("IN1"), drawFont, fontBrushs, x + 18, y + 35); // ñíà÷àëà îáíîâëÿåì íàäïèñèü âõîäà, ÷òîáû íå áûëî ìèãàíèÿ
+			g->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã²Ã¥ÃªÃ±Ã²Ã 
+			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã«Ã¨Ã­Ã¨Ã© Ã¨ Ã´Ã®Ã°Ã¬
+			g->DrawString(Convert::ToString("IN1"), drawFont, fontBrushs, x + 18, y + 35); // Ã±Ã­Ã Ã·Ã Ã«Ã  Ã®Ã¡Ã­Ã®Ã¢Ã«Ã¿Ã¥Ã¬ Ã­Ã Ã¤Ã¯Ã¨Ã±Ã¨Ã¼ Ã¢ÃµÃ®Ã¤Ã , Ã·Ã²Ã®Ã¡Ã» Ã­Ã¥ Ã¡Ã»Ã«Ã® Ã¬Ã¨Ã£Ã Ã­Ã¨Ã¿
 		}
 
-		void fbdINT(int x, int y, bool z) // ôóíêöèÿ, êîòîðàÿ â çàâèñèìîñòè îò òîãî, ÷òî ïîäõîäèò ê IN2, ïîäñâå÷èâàåò åãî çåëåíûì èëè áåëûì
+		void fbdINT(int x, int y, bool z) // Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿, ÃªÃ®Ã²Ã®Ã°Ã Ã¿ Ã¢ Ã§Ã Ã¢Ã¨Ã±Ã¨Ã¬Ã®Ã±Ã²Ã¨ Ã®Ã² Ã²Ã®Ã£Ã®, Ã·Ã²Ã® Ã¯Ã®Ã¤ÃµÃ®Ã¤Ã¨Ã² Ãª IN2, Ã¯Ã®Ã¤Ã±Ã¢Ã¥Ã·Ã¨Ã¢Ã Ã¥Ã² Ã¥Ã£Ã® Ã§Ã¥Ã«Ã¥Ã­Ã»Ã¬ Ã¨Ã«Ã¨ Ã¡Ã¥Ã«Ã»Ã¬
 		{
 			y *= my;
 			x *= mx;
@@ -272,13 +293,13 @@ namespace CppCLRWinFormsProject {
 			SolidBrush^ fontBrushs = gcnew SolidBrush(Color::Black);
 			System::Drawing::Font^ drawFont = gcnew System::Drawing::Font("Arial", 11);
 			g->FillRectangle(fontBrush, 12 + x, 56 + y, 40, 23);
-			g->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå òåêñòà
-			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå ëèíèé è ôîðì
+			g->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã²Ã¥ÃªÃ±Ã²Ã 
+			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã«Ã¨Ã­Ã¨Ã© Ã¨ Ã´Ã®Ã°Ã¬
 			g->DrawString(Convert::ToString("IN2"), drawFont, fontBrushs, x + 18, y + 60);
 
 		}
 
-		void fbdOUT(int x, int y, bool z) // ôóíêöèÿ, êîòîðàÿ ïîäñâå÷èâàåò âûõîä áëîêà FBD çåëåíûì èëè áåëûì
+		void fbdOUT(int x, int y, bool z) // Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿, ÃªÃ®Ã²Ã®Ã°Ã Ã¿ Ã¯Ã®Ã¤Ã±Ã¢Ã¥Ã·Ã¨Ã¢Ã Ã¥Ã² Ã¢Ã»ÃµÃ®Ã¤ Ã¡Ã«Ã®ÃªÃ  FBD Ã§Ã¥Ã«Ã¥Ã­Ã»Ã¬ Ã¨Ã«Ã¨ Ã¡Ã¥Ã«Ã»Ã¬
 		{
 			y *= my;
 			y += biasY;
@@ -297,8 +318,8 @@ namespace CppCLRWinFormsProject {
 			SolidBrush^ fontBrushs = gcnew SolidBrush(Color::Black);
 			System::Drawing::Font^ drawFont = gcnew System::Drawing::Font("Arial", 11);
 			g->FillRectangle(fontBrush, 75 + x, 32 + y, 38, 23);
-			g->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå òåêñòà
-			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå ëèíèé è ôîðì
+			g->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã²Ã¥ÃªÃ±Ã²Ã 
+			g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã«Ã¨Ã­Ã¨Ã© Ã¨ Ã´Ã®Ã°Ã¬
 			g->DrawString(Convert::ToString("OUT"), drawFont, fontBrushs, x + 75, y + 35);
 		}
 
@@ -308,10 +329,10 @@ namespace CppCLRWinFormsProject {
 			fbdINT(x, y, Logic[x - 1][y + 1]);
 			Logic[x][y] = Logic[x - 1][y] || Logic[x - 1][y + 1];
 			fbdOUT(x, y, Logic[x][y]);
-			pictureBox1->Invalidate(); // ôóíêöèÿ îáíîâëåíèÿ êàðòèíêè
+			pictureBox1->Invalidate(); // Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿ Ã®Ã¡Ã­Ã®Ã¢Ã«Ã¥Ã­Ã¨Ã¿ ÃªÃ Ã°Ã²Ã¨Ã­ÃªÃ¨
 		}
 
-		void fbdEND(int x, int y, bool z, String^ b) // ôóíêöèÿ, êîòîðàÿ ïîäñâå÷èâàåò âûõîä ïðîãðàììû çåëåíûì èëè áåëûì
+		void fbdEND(int x, int y, bool z, String^ b) // Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿, ÃªÃ®Ã²Ã®Ã°Ã Ã¿ Ã¯Ã®Ã¤Ã±Ã¢Ã¥Ã·Ã¨Ã¢Ã Ã¥Ã² Ã¢Ã»ÃµÃ®Ã¤ Ã¯Ã°Ã®Ã£Ã°Ã Ã¬Ã¬Ã» Ã§Ã¥Ã«Ã¥Ã­Ã»Ã¬ Ã¨Ã«Ã¨ Ã¡Ã¥Ã«Ã»Ã¬
 		{
 			Logic[x][y] = z;
 			y *= my;
@@ -337,8 +358,8 @@ namespace CppCLRWinFormsProject {
 				x -= ((b->Length - 2) * 4);
 				y -= 26;
 			}
-			d->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå òåêñòà
-			d->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Âêëþ÷èòü ñãëàæèâàíèå ëèíèé è ôîðì
+			d->TextRenderingHint = System::Drawing::Text::TextRenderingHint::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã²Ã¥ÃªÃ±Ã²Ã 
+			d->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias; // Ã‚ÃªÃ«Ã¾Ã·Ã¨Ã²Ã¼ Ã±Ã£Ã«Ã Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã«Ã¨Ã­Ã¨Ã© Ã¨ Ã´Ã®Ã°Ã¬
 			d->DrawString(b, drawFont, fontBrushs, x + 80, y + 35);
 		}
 
@@ -356,10 +377,10 @@ namespace CppCLRWinFormsProject {
 		fbdjumps(1,0,1);
 		fbdand(1,0);
 		fbdend(2, 0, "END");
-		pictureBox1->Invalidate(); // ôóíêöèÿ îáíîâëåíèÿ êàðòèíêè
+		pictureBox1->Invalidate(); // Ã´Ã³Ã­ÃªÃ¶Ã¨Ã¿ Ã®Ã¡Ã­Ã®Ã¢Ã«Ã¥Ã­Ã¨Ã¿ ÃªÃ Ã°Ã²Ã¨Ã­ÃªÃ¨
 	}
 private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
-	bufferImage = gcnew Bitmap(pictureBox1->Width, pictureBox1->Height); // çàäàíèå ãðàíèö îòðèñîâêè
+	bufferImage = gcnew Bitmap(pictureBox1->Width, pictureBox1->Height); // Ã§Ã Ã¤Ã Ã­Ã¨Ã¥ Ã£Ã°Ã Ã­Ã¨Ã¶ Ã®Ã²Ã°Ã¨Ã±Ã®Ã¢ÃªÃ¨
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
