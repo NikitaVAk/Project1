@@ -244,7 +244,7 @@ namespace CppCLRWinFormsProject {
 			{
 			a = x / mx + z - 1;
 			b = (y - biasY) / my;
-			Logic[numbprog][x/mx + z - 1][(y - biasY)/ my] = true;
+			Logic[x/mx + z - 1][(y - biasY)/ my] = true;
 			z--;
 			}
 		}
