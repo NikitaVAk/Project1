@@ -18,11 +18,6 @@ namespace CppCLRWinFormsProject {
 	int Logic[10][10];
 	string Position[10][10];
 
-	int mx = 150;
-	int my = 55;
-	int biasY = 60;
-	int Logic[10][10];
-
 	/// <summary>
 	/// Summary for Form1
 	/// </summary>
