@@ -1,4 +1,4 @@
-#pragma once
+#include <string>
 
 namespace CppCLRWinFormsProject {
 
@@ -8,6 +8,15 @@ namespace CppCLRWinFormsProject {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace std;
+	using namespace System::Text;
+	using namespace std;
+
+	int mx = 150;
+	int my = 55;
+	int biasY = 60;
+	int Logic[10][10];
+	string Position[10][10];
 
 	int mx = 150;
 	int my = 55;
@@ -138,6 +147,30 @@ namespace CppCLRWinFormsProject {
 		}
 	}
 #pragma endregion
+
+		String^ convert(string st) // функция конвертирует из std::string в String^ (C++/CLI) по символьно передавая из одной стркоки в другую
+		{
+			String^ gname = "";
+			int i = 0;
+			while (st[i] != '\0')
+			{
+				gname += Convert::ToChar(st[i]); // конвертирую каждый символ в char, иначе принимает за число
+				i++;
+			}
+			return gname;
+		}
+		
+		string convert(String^ stname) // функция конвертирует из String^ (C++/CLI) в std::string. Это перегрузка предыдущей функции
+		{
+			string st;
+			int i = 0;
+			while (i < stname->Length) // не знаю как отметить конец текста, поэтому использую свойство String^->Length, которое возвращает длину текста
+			{
+				st += stname[i];
+				i++;
+			}
+			return st;
+		}
 		void fbdvar(int x, int y, String^ name)  // ôóíêöèÿ ñîçäàíèÿ áëîêà Âõîä â ÿçûêå FBD
 		{
 			x *= mx;
